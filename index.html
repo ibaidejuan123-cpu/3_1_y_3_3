@@ -51,6 +51,22 @@
         var map = L.map('map', {
             zoomControl:false, maxZoom:28, minZoom:1
         }).fitBounds([[37.910256205672894,-7.578706888626131],[43.09303814146665,4.667905356139785]]);
+var osm = L.tileLayer(
+    		'https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png',
+    		{
+        	attribution: '&copy; OpenStreetMap contributors',
+        	maxZoom: 19
+    		}
+		);
+
+	osm.addTo(map);
+	
+var osmLabels = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}{r}.png', {
+    attribution: '© OpenStreetMap contributors',
+    pane: 'shadowPane', // Esto las sitúa por encima de los marcadores
+    zIndex: 1000
+}).addTo(map);
+
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
