@@ -50,7 +50,7 @@
         <script>
         var map = L.map('map', {
             zoomControl:false, maxZoom:28, minZoom:1
-        }).fitBounds([[37.910256205672894,-7.578706888626131],[43.09303814146665,4.667905356139785]]);
+        }).fitBounds([[34.24871081954369,-9.829207511877703],[45.2208800859181,15.150858923670814]]);
 var osm = L.tileLayer(
     		'https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png',
     		{
@@ -156,7 +156,16 @@ var osmLabels = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels
                         <td colspan="2">' + (feature.properties['NAMEUNIT'] !== null ? autolinker.link(String(feature.properties['NAMEUNIT']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
+                        <td colspan="2">' + (feature.properties['Sup_m2'] !== null ? autolinker.link(String(feature.properties['Sup_m2']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['Sup_m2_2'] !== null ? autolinker.link(String(feature.properties['Sup_m2_2']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
                         <td colspan="2">' + (feature.properties['CODIGOINE'] !== null ? autolinker.link(String(feature.properties['CODIGOINE']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['NOMBRE'] !== null ? autolinker.link(String(feature.properties['NOMBRE']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['Provincia'] !== null ? autolinker.link(String(feature.properties['Provincia']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
@@ -188,69 +197,69 @@ var osmLabels = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels
         }
 
         function style_Total_0_0(feature) {
-            if (feature.properties['2024'] >= 0.100000 && feature.properties['2024'] <= 10.000000 ) {
+            if (feature.properties['2024'] >= 0.100000 && feature.properties['2024'] <= 5.000000 ) {
                 return {
                 pane: 'pane_Total_0',
                 radius: 1.4,
                 stroke: false,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(31,71,116,1.0)',
+                fillColor: 'rgba(197,13,108,1.0)',
                 interactive: true,
             }
             }
-            if (feature.properties['2024'] >= 10.000000 && feature.properties['2024'] <= 50.000000 ) {
+            if (feature.properties['2024'] >= 5.000000 && feature.properties['2024'] <= 100.000000 ) {
                 return {
                 pane: 'pane_Total_0',
                 radius: 2.92,
                 stroke: false,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(31,71,116,1.0)',
-                interactive: true,
-            }
-            }
-            if (feature.properties['2024'] >= 50.000000 && feature.properties['2024'] <= 100.000000 ) {
-                return {
-                pane: 'pane_Total_0',
-                radius: 4.44,
-                stroke: false,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(31,71,116,1.0)',
+                fillColor: 'rgba(197,13,108,1.0)',
                 interactive: true,
             }
             }
             if (feature.properties['2024'] >= 100.000000 && feature.properties['2024'] <= 1000.000000 ) {
                 return {
                 pane: 'pane_Total_0',
+                radius: 4.44,
+                stroke: false,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(197,13,108,1.0)',
+                interactive: true,
+            }
+            }
+            if (feature.properties['2024'] >= 1000.000000 && feature.properties['2024'] <= 10000.000000 ) {
+                return {
+                pane: 'pane_Total_0',
                 radius: 5.96,
                 stroke: false,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(31,71,116,1.0)',
+                fillColor: 'rgba(197,13,108,1.0)',
                 interactive: true,
             }
             }
-            if (feature.properties['2024'] >= 1000.000000 && feature.properties['2024'] <= 3000.000000 ) {
+            if (feature.properties['2024'] >= 10000.000000 && feature.properties['2024'] <= 50000.000000 ) {
                 return {
                 pane: 'pane_Total_0',
                 radius: 7.48,
                 stroke: false,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(31,71,116,1.0)',
+                fillColor: 'rgba(197,13,108,1.0)',
                 interactive: true,
             }
             }
-            if (feature.properties['2024'] >= 3000.000000 && feature.properties['2024'] <= 6000.000000 ) {
+            if (feature.properties['2024'] >= 50000.000000 && feature.properties['2024'] <= 150000.000000 ) {
                 return {
                 pane: 'pane_Total_0',
                 radius: 9.0,
                 stroke: false,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(31,71,116,1.0)',
+                fillColor: 'rgba(197,13,108,1.0)',
                 interactive: true,
             }
             }
@@ -325,69 +334,69 @@ var osmLabels = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels
         }
 
         function style_Sinexcedentes_1_0(feature) {
-            if (feature.properties['2024'] >= 0.100000 && feature.properties['2024'] <= 10.000000 ) {
+            if (feature.properties['2024'] >= 0.100000 && feature.properties['2024'] <= 5.000000 ) {
                 return {
                 pane: 'pane_Sinexcedentes_1',
                 radius: 1.4,
                 stroke: false,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(31,71,116,1.0)',
+                fillColor: 'rgba(197,13,108,1.0)',
                 interactive: true,
             }
             }
-            if (feature.properties['2024'] >= 10.000000 && feature.properties['2024'] <= 50.000000 ) {
+            if (feature.properties['2024'] >= 5.000000 && feature.properties['2024'] <= 100.000000 ) {
                 return {
                 pane: 'pane_Sinexcedentes_1',
                 radius: 2.92,
                 stroke: false,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(31,71,116,1.0)',
-                interactive: true,
-            }
-            }
-            if (feature.properties['2024'] >= 50.000000 && feature.properties['2024'] <= 100.000000 ) {
-                return {
-                pane: 'pane_Sinexcedentes_1',
-                radius: 4.44,
-                stroke: false,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(31,71,116,1.0)',
+                fillColor: 'rgba(197,13,108,1.0)',
                 interactive: true,
             }
             }
             if (feature.properties['2024'] >= 100.000000 && feature.properties['2024'] <= 1000.000000 ) {
                 return {
                 pane: 'pane_Sinexcedentes_1',
+                radius: 4.44,
+                stroke: false,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(197,13,108,1.0)',
+                interactive: true,
+            }
+            }
+            if (feature.properties['2024'] >= 1000.000000 && feature.properties['2024'] <= 10000.000000 ) {
+                return {
+                pane: 'pane_Sinexcedentes_1',
                 radius: 5.96,
                 stroke: false,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(31,71,116,1.0)',
+                fillColor: 'rgba(197,13,108,1.0)',
                 interactive: true,
             }
             }
-            if (feature.properties['2024'] >= 1000.000000 && feature.properties['2024'] <= 3000.000000 ) {
+            if (feature.properties['2024'] >= 10000.000000 && feature.properties['2024'] <= 50000.000000 ) {
                 return {
                 pane: 'pane_Sinexcedentes_1',
                 radius: 7.48,
                 stroke: false,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(31,71,116,1.0)',
+                fillColor: 'rgba(197,13,108,1.0)',
                 interactive: true,
             }
             }
-            if (feature.properties['2024'] >= 3000.000000 && feature.properties['2024'] <= 6000.000000 ) {
+            if (feature.properties['2024'] >= 50000.000000 && feature.properties['2024'] <= 150000.000000 ) {
                 return {
                 pane: 'pane_Sinexcedentes_1',
                 radius: 9.0,
                 stroke: false,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(31,71,116,1.0)',
+                fillColor: 'rgba(197,13,108,1.0)',
                 interactive: true,
             }
             }
@@ -462,69 +471,69 @@ var osmLabels = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels
         }
 
         function style_Conexcedentessincompensacinuncontratodesuministro_2_0(feature) {
-            if (feature.properties['2024'] >= 0.100000 && feature.properties['2024'] <= 10.000000 ) {
+            if (feature.properties['2024'] >= 0.100000 && feature.properties['2024'] <= 5.000000 ) {
                 return {
                 pane: 'pane_Conexcedentessincompensacinuncontratodesuministro_2',
                 radius: 1.4,
                 stroke: false,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(31,71,116,1.0)',
+                fillColor: 'rgba(197,13,108,1.0)',
                 interactive: true,
             }
             }
-            if (feature.properties['2024'] >= 10.000000 && feature.properties['2024'] <= 50.000000 ) {
+            if (feature.properties['2024'] >= 5.000000 && feature.properties['2024'] <= 100.000000 ) {
                 return {
                 pane: 'pane_Conexcedentessincompensacinuncontratodesuministro_2',
                 radius: 2.92,
                 stroke: false,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(31,71,116,1.0)',
-                interactive: true,
-            }
-            }
-            if (feature.properties['2024'] >= 50.000000 && feature.properties['2024'] <= 100.000000 ) {
-                return {
-                pane: 'pane_Conexcedentessincompensacinuncontratodesuministro_2',
-                radius: 4.44,
-                stroke: false,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(31,71,116,1.0)',
+                fillColor: 'rgba(197,13,108,1.0)',
                 interactive: true,
             }
             }
             if (feature.properties['2024'] >= 100.000000 && feature.properties['2024'] <= 1000.000000 ) {
                 return {
                 pane: 'pane_Conexcedentessincompensacinuncontratodesuministro_2',
+                radius: 4.44,
+                stroke: false,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(197,13,108,1.0)',
+                interactive: true,
+            }
+            }
+            if (feature.properties['2024'] >= 1000.000000 && feature.properties['2024'] <= 10000.000000 ) {
+                return {
+                pane: 'pane_Conexcedentessincompensacinuncontratodesuministro_2',
                 radius: 5.96,
                 stroke: false,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(31,71,116,1.0)',
+                fillColor: 'rgba(197,13,108,1.0)',
                 interactive: true,
             }
             }
-            if (feature.properties['2024'] >= 1000.000000 && feature.properties['2024'] <= 3000.000000 ) {
+            if (feature.properties['2024'] >= 10000.000000 && feature.properties['2024'] <= 50000.000000 ) {
                 return {
                 pane: 'pane_Conexcedentessincompensacinuncontratodesuministro_2',
                 radius: 7.48,
                 stroke: false,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(31,71,116,1.0)',
+                fillColor: 'rgba(197,13,108,1.0)',
                 interactive: true,
             }
             }
-            if (feature.properties['2024'] >= 3000.000000 && feature.properties['2024'] <= 6000.000000 ) {
+            if (feature.properties['2024'] >= 50000.000000 && feature.properties['2024'] <= 150000.000000 ) {
                 return {
                 pane: 'pane_Conexcedentessincompensacinuncontratodesuministro_2',
                 radius: 9.0,
                 stroke: false,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(31,71,116,1.0)',
+                fillColor: 'rgba(197,13,108,1.0)',
                 interactive: true,
             }
             }
@@ -599,69 +608,69 @@ var osmLabels = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels
         }
 
         function style_Conexcedentessincompensacinvarioscontratosdesuministro_3_0(feature) {
-            if (feature.properties['2024'] >= 0.100000 && feature.properties['2024'] <= 10.000000 ) {
+            if (feature.properties['2024'] >= 0.100000 && feature.properties['2024'] <= 5.000000 ) {
                 return {
                 pane: 'pane_Conexcedentessincompensacinvarioscontratosdesuministro_3',
                 radius: 1.4,
                 stroke: false,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(31,71,116,1.0)',
+                fillColor: 'rgba(197,13,108,1.0)',
                 interactive: true,
             }
             }
-            if (feature.properties['2024'] >= 10.000000 && feature.properties['2024'] <= 50.000000 ) {
+            if (feature.properties['2024'] >= 5.000000 && feature.properties['2024'] <= 100.000000 ) {
                 return {
                 pane: 'pane_Conexcedentessincompensacinvarioscontratosdesuministro_3',
                 radius: 2.92,
                 stroke: false,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(31,71,116,1.0)',
-                interactive: true,
-            }
-            }
-            if (feature.properties['2024'] >= 50.000000 && feature.properties['2024'] <= 100.000000 ) {
-                return {
-                pane: 'pane_Conexcedentessincompensacinvarioscontratosdesuministro_3',
-                radius: 4.44,
-                stroke: false,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(31,71,116,1.0)',
+                fillColor: 'rgba(197,13,108,1.0)',
                 interactive: true,
             }
             }
             if (feature.properties['2024'] >= 100.000000 && feature.properties['2024'] <= 1000.000000 ) {
                 return {
                 pane: 'pane_Conexcedentessincompensacinvarioscontratosdesuministro_3',
+                radius: 4.44,
+                stroke: false,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(197,13,108,1.0)',
+                interactive: true,
+            }
+            }
+            if (feature.properties['2024'] >= 1000.000000 && feature.properties['2024'] <= 10000.000000 ) {
+                return {
+                pane: 'pane_Conexcedentessincompensacinvarioscontratosdesuministro_3',
                 radius: 5.96,
                 stroke: false,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(31,71,116,1.0)',
+                fillColor: 'rgba(197,13,108,1.0)',
                 interactive: true,
             }
             }
-            if (feature.properties['2024'] >= 1000.000000 && feature.properties['2024'] <= 3000.000000 ) {
+            if (feature.properties['2024'] >= 10000.000000 && feature.properties['2024'] <= 50000.000000 ) {
                 return {
                 pane: 'pane_Conexcedentessincompensacinvarioscontratosdesuministro_3',
                 radius: 7.48,
                 stroke: false,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(31,71,116,1.0)',
+                fillColor: 'rgba(197,13,108,1.0)',
                 interactive: true,
             }
             }
-            if (feature.properties['2024'] >= 3000.000000 && feature.properties['2024'] <= 6000.000000 ) {
+            if (feature.properties['2024'] >= 50000.000000 && feature.properties['2024'] <= 150000.000000 ) {
                 return {
                 pane: 'pane_Conexcedentessincompensacinvarioscontratosdesuministro_3',
                 radius: 9.0,
                 stroke: false,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(31,71,116,1.0)',
+                fillColor: 'rgba(197,13,108,1.0)',
                 interactive: true,
             }
             }
@@ -687,137 +696,6 @@ var osmLabels = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels
         bounds_group.addLayer(layer_Conexcedentessincompensacinvarioscontratosdesuministro_3);
         map.addLayer(layer_Conexcedentessincompensacinvarioscontratosdesuministro_3);
         function pop_Conexcedentesacogidoacompensacin_4(feature, layer) {
-            var popupContent = '<table>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['NATCODE'] !== null ? autolinker.link(String(feature.properties['NATCODE']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['NAMEUNIT'] !== null ? autolinker.link(String(feature.properties['NAMEUNIT']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['CODIGOINE'] !== null ? autolinker.link(String(feature.properties['CODIGOINE']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['NOMBRE'] !== null ? autolinker.link(String(feature.properties['NOMBRE']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['Provincia'] !== null ? autolinker.link(String(feature.properties['Provincia']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['CCAA'] !== null ? autolinker.link(String(feature.properties['CCAA']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['2020'] !== null ? autolinker.link(String(feature.properties['2020']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['2021'] !== null ? autolinker.link(String(feature.properties['2021']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['2022'] !== null ? autolinker.link(String(feature.properties['2022']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['2023'] !== null ? autolinker.link(String(feature.properties['2023']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['2024'] !== null ? autolinker.link(String(feature.properties['2024']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
-			layer.on('popupopen', function(e) {
-				addClassToPopupIfMedia(content, e.popup);
-			});
-			layer.bindPopup(content, { maxHeight: 400 });
-        }
-
-        function style_Conexcedentesacogidoacompensacin_4_0(feature) {
-            if (feature.properties['2024'] >= 0.100000 && feature.properties['2024'] <= 10.000000 ) {
-                return {
-                pane: 'pane_Conexcedentesacogidoacompensacin_4',
-                radius: 1.4,
-                stroke: false,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(31,71,116,1.0)',
-                interactive: true,
-            }
-            }
-            if (feature.properties['2024'] >= 10.000000 && feature.properties['2024'] <= 50.000000 ) {
-                return {
-                pane: 'pane_Conexcedentesacogidoacompensacin_4',
-                radius: 2.92,
-                stroke: false,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(31,71,116,1.0)',
-                interactive: true,
-            }
-            }
-            if (feature.properties['2024'] >= 50.000000 && feature.properties['2024'] <= 100.000000 ) {
-                return {
-                pane: 'pane_Conexcedentesacogidoacompensacin_4',
-                radius: 4.44,
-                stroke: false,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(31,71,116,1.0)',
-                interactive: true,
-            }
-            }
-            if (feature.properties['2024'] >= 100.000000 && feature.properties['2024'] <= 1000.000000 ) {
-                return {
-                pane: 'pane_Conexcedentesacogidoacompensacin_4',
-                radius: 5.96,
-                stroke: false,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(31,71,116,1.0)',
-                interactive: true,
-            }
-            }
-            if (feature.properties['2024'] >= 1000.000000 && feature.properties['2024'] <= 3000.000000 ) {
-                return {
-                pane: 'pane_Conexcedentesacogidoacompensacin_4',
-                radius: 7.48,
-                stroke: false,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(31,71,116,1.0)',
-                interactive: true,
-            }
-            }
-            if (feature.properties['2024'] >= 3000.000000 && feature.properties['2024'] <= 6000.000000 ) {
-                return {
-                pane: 'pane_Conexcedentesacogidoacompensacin_4',
-                radius: 9.0,
-                stroke: false,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(31,71,116,1.0)',
-                interactive: true,
-            }
-            }
-        }
-        map.createPane('pane_Conexcedentesacogidoacompensacin_4');
-        map.getPane('pane_Conexcedentesacogidoacompensacin_4').style.zIndex = 404;
-        map.getPane('pane_Conexcedentesacogidoacompensacin_4').style['mix-blend-mode'] = 'normal';
-        var layer_Conexcedentesacogidoacompensacin_4 = new L.geoJson(json_Conexcedentesacogidoacompensacin_4, {
-            attribution: '',
-            interactive: true,
-            dataVar: 'json_Conexcedentesacogidoacompensacin_4',
-            layerName: 'layer_Conexcedentesacogidoacompensacin_4',
-            pane: 'pane_Conexcedentesacogidoacompensacin_4',
-            onEachFeature: pop_Conexcedentesacogidoacompensacin_4,
-            pointToLayer: function (feature, latlng) {
-                var context = {
-                    feature: feature,
-                    variables: {}
-                };
-                return L.circleMarker(latlng, style_Conexcedentesacogidoacompensacin_4_0(feature));
-            },
-        });
-        bounds_group.addLayer(layer_Conexcedentesacogidoacompensacin_4);
-        map.addLayer(layer_Conexcedentesacogidoacompensacin_4);
-        function pop_Total_5(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['NATCODE'] !== null ? autolinker.link(String(feature.properties['NATCODE']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
@@ -866,10 +744,10 @@ var osmLabels = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_Total_5_0(feature) {
+        function style_Conexcedentesacogidoacompensacin_4_0(feature) {
             if (feature.properties['2024'] >= 0.100000 && feature.properties['2024'] <= 5.000000 ) {
                 return {
-                pane: 'pane_Total_5',
+                pane: 'pane_Conexcedentesacogidoacompensacin_4',
                 radius: 1.4,
                 stroke: false,
                 fill: true,
@@ -880,7 +758,7 @@ var osmLabels = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels
             }
             if (feature.properties['2024'] >= 5.000000 && feature.properties['2024'] <= 100.000000 ) {
                 return {
-                pane: 'pane_Total_5',
+                pane: 'pane_Conexcedentesacogidoacompensacin_4',
                 radius: 2.92,
                 stroke: false,
                 fill: true,
@@ -891,7 +769,7 @@ var osmLabels = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels
             }
             if (feature.properties['2024'] >= 100.000000 && feature.properties['2024'] <= 1000.000000 ) {
                 return {
-                pane: 'pane_Total_5',
+                pane: 'pane_Conexcedentesacogidoacompensacin_4',
                 radius: 4.44,
                 stroke: false,
                 fill: true,
@@ -902,7 +780,7 @@ var osmLabels = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels
             }
             if (feature.properties['2024'] >= 1000.000000 && feature.properties['2024'] <= 10000.000000 ) {
                 return {
-                pane: 'pane_Total_5',
+                pane: 'pane_Conexcedentesacogidoacompensacin_4',
                 radius: 5.96,
                 stroke: false,
                 fill: true,
@@ -913,7 +791,7 @@ var osmLabels = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels
             }
             if (feature.properties['2024'] >= 10000.000000 && feature.properties['2024'] <= 50000.000000 ) {
                 return {
-                pane: 'pane_Total_5',
+                pane: 'pane_Conexcedentesacogidoacompensacin_4',
                 radius: 7.48,
                 stroke: false,
                 fill: true,
@@ -924,12 +802,139 @@ var osmLabels = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels
             }
             if (feature.properties['2024'] >= 50000.000000 && feature.properties['2024'] <= 150000.000000 ) {
                 return {
-                pane: 'pane_Total_5',
+                pane: 'pane_Conexcedentesacogidoacompensacin_4',
                 radius: 9.0,
                 stroke: false,
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(197,13,108,1.0)',
+                interactive: true,
+            }
+            }
+        }
+        map.createPane('pane_Conexcedentesacogidoacompensacin_4');
+        map.getPane('pane_Conexcedentesacogidoacompensacin_4').style.zIndex = 404;
+        map.getPane('pane_Conexcedentesacogidoacompensacin_4').style['mix-blend-mode'] = 'normal';
+        var layer_Conexcedentesacogidoacompensacin_4 = new L.geoJson(json_Conexcedentesacogidoacompensacin_4, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_Conexcedentesacogidoacompensacin_4',
+            layerName: 'layer_Conexcedentesacogidoacompensacin_4',
+            pane: 'pane_Conexcedentesacogidoacompensacin_4',
+            onEachFeature: pop_Conexcedentesacogidoacompensacin_4,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.circleMarker(latlng, style_Conexcedentesacogidoacompensacin_4_0(feature));
+            },
+        });
+        bounds_group.addLayer(layer_Conexcedentesacogidoacompensacin_4);
+        function pop_Total_5(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['NATCODE'] !== null ? autolinker.link(String(feature.properties['NATCODE']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['NAMEUNIT'] !== null ? autolinker.link(String(feature.properties['NAMEUNIT']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['CODIGOINE'] !== null ? autolinker.link(String(feature.properties['CODIGOINE']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['Provincia'] !== null ? autolinker.link(String(feature.properties['Provincia']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['CCAA'] !== null ? autolinker.link(String(feature.properties['CCAA']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['2020'] !== null ? autolinker.link(String(feature.properties['2020']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['2021'] !== null ? autolinker.link(String(feature.properties['2021']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['2022'] !== null ? autolinker.link(String(feature.properties['2022']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['2023'] !== null ? autolinker.link(String(feature.properties['2023']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['2024'] !== null ? autolinker.link(String(feature.properties['2024']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+			layer.on('popupopen', function(e) {
+				addClassToPopupIfMedia(content, e.popup);
+			});
+			layer.bindPopup(content, { maxHeight: 400 });
+        }
+
+        function style_Total_5_0(feature) {
+            if (feature.properties['2024'] >= 0.000000 && feature.properties['2024'] <= 10.000000 ) {
+                return {
+                pane: 'pane_Total_5',
+                radius: 1.4,
+                stroke: false,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(31,71,116,1.0)',
+                interactive: true,
+            }
+            }
+            if (feature.properties['2024'] >= 10.000000 && feature.properties['2024'] <= 50.000000 ) {
+                return {
+                pane: 'pane_Total_5',
+                radius: 2.92,
+                stroke: false,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(31,71,116,1.0)',
+                interactive: true,
+            }
+            }
+            if (feature.properties['2024'] >= 50.000000 && feature.properties['2024'] <= 100.000000 ) {
+                return {
+                pane: 'pane_Total_5',
+                radius: 4.44,
+                stroke: false,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(31,71,116,1.0)',
+                interactive: true,
+            }
+            }
+            if (feature.properties['2024'] >= 100.000000 && feature.properties['2024'] <= 1000.000000 ) {
+                return {
+                pane: 'pane_Total_5',
+                radius: 5.96,
+                stroke: false,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(31,71,116,1.0)',
+                interactive: true,
+            }
+            }
+            if (feature.properties['2024'] >= 1000.000000 && feature.properties['2024'] <= 3000.000000 ) {
+                return {
+                pane: 'pane_Total_5',
+                radius: 7.48,
+                stroke: false,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(31,71,116,1.0)',
+                interactive: true,
+            }
+            }
+            if (feature.properties['2024'] >= 3000.000000 && feature.properties['2024'] <= 6000.000000 ) {
+                return {
+                pane: 'pane_Total_5',
+                radius: 9.0,
+                stroke: false,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(31,71,116,1.0)',
                 interactive: true,
             }
             }
@@ -1004,69 +1009,69 @@ var osmLabels = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels
         }
 
         function style_Sinexcedentes_6_0(feature) {
-            if (feature.properties['2024'] >= 0.100000 && feature.properties['2024'] <= 5.000000 ) {
+            if (feature.properties['2024'] >= 0.100000 && feature.properties['2024'] <= 10.000000 ) {
                 return {
                 pane: 'pane_Sinexcedentes_6',
                 radius: 1.4,
                 stroke: false,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(197,13,108,1.0)',
+                fillColor: 'rgba(31,71,116,1.0)',
                 interactive: true,
             }
             }
-            if (feature.properties['2024'] >= 5.000000 && feature.properties['2024'] <= 100.000000 ) {
+            if (feature.properties['2024'] >= 10.000000 && feature.properties['2024'] <= 50.000000 ) {
                 return {
                 pane: 'pane_Sinexcedentes_6',
                 radius: 2.92,
                 stroke: false,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(197,13,108,1.0)',
+                fillColor: 'rgba(31,71,116,1.0)',
                 interactive: true,
             }
             }
-            if (feature.properties['2024'] >= 100.000000 && feature.properties['2024'] <= 1000.000000 ) {
+            if (feature.properties['2024'] >= 50.000000 && feature.properties['2024'] <= 100.000000 ) {
                 return {
                 pane: 'pane_Sinexcedentes_6',
                 radius: 4.44,
                 stroke: false,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(197,13,108,1.0)',
+                fillColor: 'rgba(31,71,116,1.0)',
                 interactive: true,
             }
             }
-            if (feature.properties['2024'] >= 1000.000000 && feature.properties['2024'] <= 10000.000000 ) {
+            if (feature.properties['2024'] >= 100.000000 && feature.properties['2024'] <= 1000.000000 ) {
                 return {
                 pane: 'pane_Sinexcedentes_6',
                 radius: 5.96,
                 stroke: false,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(197,13,108,1.0)',
+                fillColor: 'rgba(31,71,116,1.0)',
                 interactive: true,
             }
             }
-            if (feature.properties['2024'] >= 10000.000000 && feature.properties['2024'] <= 50000.000000 ) {
+            if (feature.properties['2024'] >= 1000.000000 && feature.properties['2024'] <= 3000.000000 ) {
                 return {
                 pane: 'pane_Sinexcedentes_6',
                 radius: 7.48,
                 stroke: false,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(197,13,108,1.0)',
+                fillColor: 'rgba(31,71,116,1.0)',
                 interactive: true,
             }
             }
-            if (feature.properties['2024'] >= 50000.000000 && feature.properties['2024'] <= 150000.000000 ) {
+            if (feature.properties['2024'] >= 3000.000000 && feature.properties['2024'] <= 6000.000000 ) {
                 return {
                 pane: 'pane_Sinexcedentes_6',
                 radius: 9.0,
                 stroke: false,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(197,13,108,1.0)',
+                fillColor: 'rgba(31,71,116,1.0)',
                 interactive: true,
             }
             }
@@ -1141,69 +1146,69 @@ var osmLabels = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels
         }
 
         function style_Conexcedentessincompensacinuncontratodesuministro_7_0(feature) {
-            if (feature.properties['2024'] >= 0.100000 && feature.properties['2024'] <= 5.000000 ) {
+            if (feature.properties['2024'] >= 0.100000 && feature.properties['2024'] <= 10.000000 ) {
                 return {
                 pane: 'pane_Conexcedentessincompensacinuncontratodesuministro_7',
                 radius: 1.4,
                 stroke: false,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(197,13,108,1.0)',
+                fillColor: 'rgba(31,71,116,1.0)',
                 interactive: true,
             }
             }
-            if (feature.properties['2024'] >= 5.000000 && feature.properties['2024'] <= 100.000000 ) {
+            if (feature.properties['2024'] >= 10.000000 && feature.properties['2024'] <= 50.000000 ) {
                 return {
                 pane: 'pane_Conexcedentessincompensacinuncontratodesuministro_7',
                 radius: 2.92,
                 stroke: false,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(197,13,108,1.0)',
+                fillColor: 'rgba(31,71,116,1.0)',
                 interactive: true,
             }
             }
-            if (feature.properties['2024'] >= 100.000000 && feature.properties['2024'] <= 1000.000000 ) {
+            if (feature.properties['2024'] >= 50.000000 && feature.properties['2024'] <= 100.000000 ) {
                 return {
                 pane: 'pane_Conexcedentessincompensacinuncontratodesuministro_7',
                 radius: 4.44,
                 stroke: false,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(197,13,108,1.0)',
+                fillColor: 'rgba(31,71,116,1.0)',
                 interactive: true,
             }
             }
-            if (feature.properties['2024'] >= 1000.000000 && feature.properties['2024'] <= 10000.000000 ) {
+            if (feature.properties['2024'] >= 100.000000 && feature.properties['2024'] <= 1000.000000 ) {
                 return {
                 pane: 'pane_Conexcedentessincompensacinuncontratodesuministro_7',
                 radius: 5.96,
                 stroke: false,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(197,13,108,1.0)',
+                fillColor: 'rgba(31,71,116,1.0)',
                 interactive: true,
             }
             }
-            if (feature.properties['2024'] >= 10000.000000 && feature.properties['2024'] <= 50000.000000 ) {
+            if (feature.properties['2024'] >= 1000.000000 && feature.properties['2024'] <= 3000.000000 ) {
                 return {
                 pane: 'pane_Conexcedentessincompensacinuncontratodesuministro_7',
                 radius: 7.48,
                 stroke: false,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(197,13,108,1.0)',
+                fillColor: 'rgba(31,71,116,1.0)',
                 interactive: true,
             }
             }
-            if (feature.properties['2024'] >= 50000.000000 && feature.properties['2024'] <= 150000.000000 ) {
+            if (feature.properties['2024'] >= 3000.000000 && feature.properties['2024'] <= 6000.000000 ) {
                 return {
                 pane: 'pane_Conexcedentessincompensacinuncontratodesuministro_7',
                 radius: 9.0,
                 stroke: false,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(197,13,108,1.0)',
+                fillColor: 'rgba(31,71,116,1.0)',
                 interactive: true,
             }
             }
@@ -1278,69 +1283,69 @@ var osmLabels = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels
         }
 
         function style_Conexcedentessincompensacinvarioscontratosdesuministro_8_0(feature) {
-            if (feature.properties['2024'] >= 0.100000 && feature.properties['2024'] <= 5.000000 ) {
+            if (feature.properties['2024'] >= 0.100000 && feature.properties['2024'] <= 10.000000 ) {
                 return {
                 pane: 'pane_Conexcedentessincompensacinvarioscontratosdesuministro_8',
                 radius: 1.4,
                 stroke: false,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(197,13,108,1.0)',
+                fillColor: 'rgba(31,71,116,1.0)',
                 interactive: true,
             }
             }
-            if (feature.properties['2024'] >= 5.000000 && feature.properties['2024'] <= 100.000000 ) {
+            if (feature.properties['2024'] >= 10.000000 && feature.properties['2024'] <= 50.000000 ) {
                 return {
                 pane: 'pane_Conexcedentessincompensacinvarioscontratosdesuministro_8',
                 radius: 2.92,
                 stroke: false,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(197,13,108,1.0)',
+                fillColor: 'rgba(31,71,116,1.0)',
                 interactive: true,
             }
             }
-            if (feature.properties['2024'] >= 100.000000 && feature.properties['2024'] <= 1000.000000 ) {
+            if (feature.properties['2024'] >= 50.000000 && feature.properties['2024'] <= 100.000000 ) {
                 return {
                 pane: 'pane_Conexcedentessincompensacinvarioscontratosdesuministro_8',
                 radius: 4.44,
                 stroke: false,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(197,13,108,1.0)',
+                fillColor: 'rgba(31,71,116,1.0)',
                 interactive: true,
             }
             }
-            if (feature.properties['2024'] >= 1000.000000 && feature.properties['2024'] <= 10000.000000 ) {
+            if (feature.properties['2024'] >= 100.000000 && feature.properties['2024'] <= 1000.000000 ) {
                 return {
                 pane: 'pane_Conexcedentessincompensacinvarioscontratosdesuministro_8',
                 radius: 5.96,
                 stroke: false,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(197,13,108,1.0)',
+                fillColor: 'rgba(31,71,116,1.0)',
                 interactive: true,
             }
             }
-            if (feature.properties['2024'] >= 10000.000000 && feature.properties['2024'] <= 50000.000000 ) {
+            if (feature.properties['2024'] >= 1000.000000 && feature.properties['2024'] <= 3000.000000 ) {
                 return {
                 pane: 'pane_Conexcedentessincompensacinvarioscontratosdesuministro_8',
                 radius: 7.48,
                 stroke: false,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(197,13,108,1.0)',
+                fillColor: 'rgba(31,71,116,1.0)',
                 interactive: true,
             }
             }
-            if (feature.properties['2024'] >= 50000.000000 && feature.properties['2024'] <= 150000.000000 ) {
+            if (feature.properties['2024'] >= 3000.000000 && feature.properties['2024'] <= 6000.000000 ) {
                 return {
                 pane: 'pane_Conexcedentessincompensacinvarioscontratosdesuministro_8',
                 radius: 9.0,
                 stroke: false,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(197,13,108,1.0)',
+                fillColor: 'rgba(31,71,116,1.0)',
                 interactive: true,
             }
             }
@@ -1372,12 +1377,6 @@ var osmLabels = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels
                     </tr>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['NAMEUNIT'] !== null ? autolinker.link(String(feature.properties['NAMEUNIT']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['Sup_m2'] !== null ? autolinker.link(String(feature.properties['Sup_m2']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['Sup_m2_2'] !== null ? autolinker.link(String(feature.properties['Sup_m2_2']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['CODIGOINE'] !== null ? autolinker.link(String(feature.properties['CODIGOINE']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
@@ -1415,69 +1414,69 @@ var osmLabels = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels
         }
 
         function style_Conexcedentesacogidoacompensacin_9_0(feature) {
-            if (feature.properties['2024'] >= 0.100000 && feature.properties['2024'] <= 5.000000 ) {
+            if (feature.properties['2024'] >= 0.100000 && feature.properties['2024'] <= 10.000000 ) {
                 return {
                 pane: 'pane_Conexcedentesacogidoacompensacin_9',
                 radius: 1.4,
                 stroke: false,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(197,13,108,1.0)',
+                fillColor: 'rgba(31,71,116,1.0)',
                 interactive: true,
             }
             }
-            if (feature.properties['2024'] >= 5.000000 && feature.properties['2024'] <= 100.000000 ) {
+            if (feature.properties['2024'] >= 10.000000 && feature.properties['2024'] <= 50.000000 ) {
                 return {
                 pane: 'pane_Conexcedentesacogidoacompensacin_9',
                 radius: 2.92,
                 stroke: false,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(197,13,108,1.0)',
+                fillColor: 'rgba(31,71,116,1.0)',
                 interactive: true,
             }
             }
-            if (feature.properties['2024'] >= 100.000000 && feature.properties['2024'] <= 1000.000000 ) {
+            if (feature.properties['2024'] >= 50.000000 && feature.properties['2024'] <= 100.000000 ) {
                 return {
                 pane: 'pane_Conexcedentesacogidoacompensacin_9',
                 radius: 4.44,
                 stroke: false,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(197,13,108,1.0)',
+                fillColor: 'rgba(31,71,116,1.0)',
                 interactive: true,
             }
             }
-            if (feature.properties['2024'] >= 1000.000000 && feature.properties['2024'] <= 10000.000000 ) {
+            if (feature.properties['2024'] >= 100.000000 && feature.properties['2024'] <= 1000.000000 ) {
                 return {
                 pane: 'pane_Conexcedentesacogidoacompensacin_9',
                 radius: 5.96,
                 stroke: false,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(197,13,108,1.0)',
+                fillColor: 'rgba(31,71,116,1.0)',
                 interactive: true,
             }
             }
-            if (feature.properties['2024'] >= 10000.000000 && feature.properties['2024'] <= 50000.000000 ) {
+            if (feature.properties['2024'] >= 1000.000000 && feature.properties['2024'] <= 3000.000000 ) {
                 return {
                 pane: 'pane_Conexcedentesacogidoacompensacin_9',
                 radius: 7.48,
                 stroke: false,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(197,13,108,1.0)',
+                fillColor: 'rgba(31,71,116,1.0)',
                 interactive: true,
             }
             }
-            if (feature.properties['2024'] >= 50000.000000 && feature.properties['2024'] <= 150000.000000 ) {
+            if (feature.properties['2024'] >= 3000.000000 && feature.properties['2024'] <= 6000.000000 ) {
                 return {
                 pane: 'pane_Conexcedentesacogidoacompensacin_9',
                 radius: 9.0,
                 stroke: false,
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(197,13,108,1.0)',
+                fillColor: 'rgba(31,71,116,1.0)',
                 interactive: true,
             }
             }
@@ -1501,6 +1500,7 @@ var osmLabels = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels
             },
         });
         bounds_group.addLayer(layer_Conexcedentesacogidoacompensacin_9);
+        map.addLayer(layer_Conexcedentesacogidoacompensacin_9);
         const url = {"Nominatim OSM": "https://nominatim.openstreetmap.org/search?format=geojson&addressdetails=1&",
         "France BAN": "https://api-adresse.data.gouv.fr/search/?"}
         var photonControl = L.control.photon({
@@ -1555,18 +1555,18 @@ var osmLabels = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels
             }
         });
         var overlaysTree = [
-        {label: '<b>Potencia instalada por municipio</b>',  selectAllCheckbox: true, children: [
-            {label: 'Con excedentes acogido a compensación<br /><table><tr><td style="text-align: center;"></table>', layer: layer_Conexcedentesacogidoacompensacin_9},
-            {label: 'Con excedentes sin compensación (varios contratos de suministro)<br /><table><tr><td style="text-align: center;"></table>', layer: layer_Conexcedentessincompensacinvarioscontratosdesuministro_8},
-            {label: 'Con excedentes sin compensación (un contrato de suministro)<br /><table><tr><td style="text-align: center;"></table>', layer: layer_Conexcedentessincompensacinuncontratodesuministro_7},
-            {label: 'Sin excedentes<br /><table><tr><td style="text-align: center;"></table>', layer: layer_Sinexcedentes_6},
-            {label: 'Total<br /><table><tr><td style="text-align: center;"><img src="legend/Total_5_050.png" /></td><td>0 - 5</td></tr><tr><td style="text-align: center;"><img src="legend/Total_5_51001.png" /></td><td>5 - 100</td></tr><tr><td style="text-align: center;"><img src="legend/Total_5_10010002.png" /></td><td>100 - 1000</td></tr><tr><td style="text-align: center;"><img src="legend/Total_5_1000100003.png" /></td><td>1000 - 10000</td></tr><tr><td style="text-align: center;"><img src="legend/Total_5_10000500004.png" /></td><td>10000 - 50000</td></tr><tr><td style="text-align: center;"><img src="legend/Total_5_500001500005.png" /></td><td>50000 - 150000</td></tr></table>', layer: layer_Total_5},]},
-        {label: '<b>Número de instalaciones por municipio</b>',  selectAllCheckbox: true, children: [
-            {label: 'Con excedentes acogido a compensación<br /><table><tr><td style="text-align: center;"></table>', layer: layer_Conexcedentesacogidoacompensacin_4},
-            {label: 'Con excedentes sin compensación (varios contratos de suministro)<br /><table><tr><td style="text-align: center;"></table>', layer: layer_Conexcedentessincompensacinvarioscontratosdesuministro_3},
-            {label: 'Con excedentes sin compensación (un contrato de suministro)<br /><table><tr><td style="text-align: center;"></table>', layer: layer_Conexcedentessincompensacinuncontratodesuministro_2},
-            {label: 'Sin excedentes<br /><table><tr><td style="text-align: center;"></table>', layer: layer_Sinexcedentes_1},
-            {label: 'Total<br /><table><tr><td style="text-align: center;"><img src="legend/Total_0_100.png" /></td><td><10</td></tr><tr><td style="text-align: center;"><img src="legend/Total_0_10501.png" /></td><td>10 - 50</td></tr><tr><td style="text-align: center;"><img src="legend/Total_0_501002.png" /></td><td>50 - 100</td></tr><tr><td style="text-align: center;"><img src="legend/Total_0_10010003.png" /></td><td>100 - 1000</td></tr><tr><td style="text-align: center;"><img src="legend/Total_0_100030004.png" /></td><td>1000 - 3000</td></tr><tr><td style="text-align: center;"><img src="legend/Total_0_300060005.png" /></td><td>3000 - 6000</td></tr></table>', layer: layer_Total_0},]},]
+        {label: '<b>Número de instalaciones por municipio</b>', collapsed: true, selectAllCheckbox: true, children: [
+            {label: 'Con excedentes acogido a compensación</table>', layer: layer_Conexcedentesacogidoacompensacin_9},
+            {label: 'Con excedentes sin compensación (varios contratos de suministro)</table>', layer: layer_Conexcedentessincompensacinvarioscontratosdesuministro_8},
+            {label: 'Con excedentes sin compensación (un contrato de suministro)</table>', layer: layer_Conexcedentessincompensacinuncontratodesuministro_7},
+            {label: 'Sin excedentes</table>', layer: layer_Sinexcedentes_6},
+            {label: 'Total<br /><table><tr><td style="text-align: center;"><img src="legend/Total_5_100.png" /></td><td><10</td></tr><tr><td style="text-align: center;"><img src="legend/Total_5_10501.png" /></td><td>10 - 50</td></tr><tr><td style="text-align: center;"><img src="legend/Total_5_501002.png" /></td><td>50 - 100</td></tr><tr><td style="text-align: center;"><img src="legend/Total_5_10010003.png" /></td><td>100 - 1000</td></tr><tr><td style="text-align: center;"><img src="legend/Total_5_100030004.png" /></td><td>1000 - 3000</td></tr><tr><td style="text-align: center;"><img src="legend/Total_5_300060005.png" /></td><td>3000 - 6000</td></tr></table>', layer: layer_Total_5},]},
+        {label: '<b>Potencia instalada por municipio</b>', collapsed: true, selectAllCheckbox: true, children: [
+            {label: 'Con excedentes acogido a compensación</table>', layer: layer_Conexcedentesacogidoacompensacin_4},
+            {label: 'Con excedentes sin compensación (varios contratos de suministro)</table>', layer: layer_Conexcedentessincompensacinvarioscontratosdesuministro_3},
+            {label: 'Con excedentes sin compensación (un contrato de suministro)</table>', layer: layer_Conexcedentessincompensacinuncontratodesuministro_2},
+            {label: 'Sin excedentes</table>', layer: layer_Sinexcedentes_1},
+            {label: 'Total<br /><table><tr><td style="text-align: center;"><img src="legend/Total_0_5KW0.png" /></td><td><5 KW</td></tr><tr><td style="text-align: center;"><img src="legend/Total_0_5100KW1.png" /></td><td>5 - 100 KW</td></tr><tr><td style="text-align: center;"><img src="legend/Total_0_100KW1MW2.png" /></td><td>100 KW - 1 MW</td></tr><tr><td style="text-align: center;"><img src="legend/Total_0_110MW3.png" /></td><td>1 - 10 MW</td></tr><tr><td style="text-align: center;"><img src="legend/Total_0_1050MW4.png" /></td><td>10 - 50 MW</td></tr><tr><td style="text-align: center;"><img src="legend/Total_0_50150MW5.png" /></td><td>50 - 150 MW</td></tr></table>', layer: layer_Total_0},]},]
         var lay = L.control.layers.tree(null, overlaysTree,{
             //namedToggle: true,
             //selectorBack: false,
@@ -1574,9 +1574,59 @@ var osmLabels = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels
             //openedSymbol: '&#8863; &#x1f5c1;',
             //collapseAll: 'Collapse all',
             //expandAll: 'Expand all',
-            collapsed: true,
+            collapsed: false, 
         });
         lay.addTo(map);
+		document.addEventListener("DOMContentLoaded", function() {
+            // set new Layers List height which considers toggle icon
+            function newLayersListHeight() {
+                var layerScrollbarElement = document.querySelector('.leaflet-control-layers-scrollbar');
+                if (layerScrollbarElement) {
+                    var layersListElement = document.querySelector('.leaflet-control-layers-list');
+                    var originalHeight = layersListElement.style.height 
+                        || window.getComputedStyle(layersListElement).height;
+                    var newHeight = parseFloat(originalHeight) - 50;
+                    layersListElement.style.height = newHeight + 'px';
+                }
+            }
+            var isLayersListExpanded = true;
+            var controlLayersElement = document.querySelector('.leaflet-control-layers');
+            var toggleLayerControl = document.querySelector('.leaflet-control-layers-toggle');
+            // toggle Collapsed/Expanded and apply new Layers List height
+            toggleLayerControl.addEventListener('click', function() {
+                if (isLayersListExpanded) {
+                    controlLayersElement.classList.remove('leaflet-control-layers-expanded');
+                } else {
+                    controlLayersElement.classList.add('leaflet-control-layers-expanded');
+                }
+                isLayersListExpanded = !isLayersListExpanded;
+                newLayersListHeight()
+            });	
+			// apply new Layers List height if toggle layerstree
+			if (controlLayersElement) {
+				controlLayersElement.addEventListener('click', function(event) {
+					var toggleLayerHeaderPointer = event.target.closest('.leaflet-layerstree-header-pointer span');
+					if (toggleLayerHeaderPointer) {
+						newLayersListHeight();
+					}
+				});
+			}
+            // Collapsed/Expanded at Start to apply new height
+            setTimeout(function() {
+                toggleLayerControl.click();
+            }, 10);
+            setTimeout(function() {
+                toggleLayerControl.click();
+            }, 10);
+            // Collapsed touch/small screen
+            var isSmallScreen = window.innerWidth < 650;
+            if (isSmallScreen) {
+                setTimeout(function() {
+                    controlLayersElement.classList.remove('leaflet-control-layers-expanded');
+                    isLayersListExpanded = !isLayersListExpanded;
+                }, 500);
+            }  
+        });       
         setBounds();
         </script>        
     </body>
